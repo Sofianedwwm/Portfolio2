@@ -1,0 +1,118 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+   background-image: url(../assets/videobig.gif);
+   background-position: center;
+   
+}
+#video{
+    
+        position: absolute; 
+        top: 0;
+        left: 0;
+     
+        object-fit: cover; 
+    
+}
+
+main{
+
+    height: 100vh;
+    width: 100vw;
+
+}
+
+@font-face {
+    font-family: troisD ;
+    src: url(./assets/static/EduAUVICWANTArrows-SemiBold.ttf);
+}
+
+main button{
+    position: absolute;
+    top: 65vh;
+    left: 45vw;
+    background-color: black;
+    opacity: 0.6;
+    font-family: ;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(163, 196, 226);
+    height: 80px;
+    width: 150px;
+    border: 3px solid #c6e2ff;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    box-shadow: 
+		0px 0px 15px #87cefaff,
+		 0px 0px 20px #add8e6ff,
+		 inset 0px 0px 10px #87cefaff,
+		 inset 0px 0px 15px #b0c4deff,
+		 inset 0px 0px 20px #add8e6ff;
+
+   
+}
+
+main button:hover {
+    background-color: rgb(26, 33, 39); 
+    color: rgb(163, 196, 226);
+    border: 3px solid #c6e2ff; 
+    box-shadow: 
+        0px 0px 20px #ffffff,
+        0px 0px 30px #87cefa,
+        inset 0px 0px 15px #ffffff,
+        inset 0px 0px 25px #87cefa;
+    opacity: 1; 
+}
+
+.container{
+    max-width: 1600px;
+    margin: 0px auto 0;
+    padding: 100px 20px 0;
+}
+
+.BarreMilieu h1{
+    position: absolute;
+    left: 35%;
+    top: 40%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #11ffff;
+    font-size: 40px;
+    
+}
+
+.BarreMilieu span{
+    position: absolute;
+    left: 37%;
+    top: 47%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #f3e2dd;
+    font-size: 35px;
+    
+}
+
+p span{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 8vw, 120px);
+    
+}
+
+p span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
