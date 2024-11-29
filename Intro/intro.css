@@ -9,6 +9,7 @@ body{
     overflow: hidden;
    background-image: url(../assets/videobig.gif);
    background-position: center;
+   transition: background 0.5s ease;
    
 }
 #video{
@@ -116,3 +117,12 @@ p span::after {
     left: 0;
     transform: translateX(-100%);
 }
+
+#logobg{
+    color:white ;
+    position: absolute;
+    left: 93%;
+    top: 2%;
+    font-size: 70px;
+}
+
