@@ -1,0 +1,78 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: hsla(209, 58%, 32%, 1);
+    background: linear-gradient(225deg, hsla(209, 58%, 32%, 1) 22%, hsla(293, 52%, 10%, 1) 73%);
+    background: -moz-linear-gradient(225deg, hsla(209, 58%, 32%, 1) 22%, hsla(293, 52%, 10%, 1) 73%);
+    background: -webkit-linear-gradient(225deg, hsla(209, 58%, 32%, 1) 22%, hsla(293, 52%, 10%, 1) 73%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#225380", endColorstr="#230C26", GradientType=1 );
+}
+
+ul li{
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+    
+    
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-top: 10px;
+    
+}
+
+ul li a {
+    top: 20;
+    font-style: w;
+    font-weight: 600;
+    color: #add8e6ff;
+    transition: color 0.3s ease; /* Animation au survol */
+    
+}
+
+ul li a:hover {
+    color: rgb(209, 139, 48); 
+   
+}
+
+img{
+    height: 10vh;
+    width: 10vw;
+    object-fit: 5%;
+    object-position: center;
+
+   
+}
+
+.arc-container {
+    position: relative;
+    left: 20%;
+    top: 35vh;
+    width: 800px; /* Largeur totale de l'arc */
+    height: 300px; /* Hauteur totale de l'arc */
+}
+
+.arc-container img {
+    position: absolute;
+    width: 80px; /* Taille des images */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.arc-container img:hover {
+    transform: scale(1.2); /* Zoom lorsqu'on survole une image */
+}

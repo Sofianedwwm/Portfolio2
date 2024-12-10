@@ -22,3 +22,17 @@ header.addEventListener('mouseleave', () => {
     header.style.transform = 'translateY(-100%)';
     header.style.transition = '1s ease'
 });
+
+
+const arcContainer = document.getElementById('arcContainer');
+const images = arcContainer.querySelectorAll('img');
+const radius = 250; // Rayon de l'arc
+
+images.forEach((img, index) => {
+    const angle = Math.PI * (index / (images.length - 1)); // Angle en radians pour chaque image
+    const x = radius * Math.cos(angle) + arcContainer.offsetWidth / 2 - img.offsetWidth / 2;
+    const y = radius * Math.sin(angle);
+
+    img.style.left = `${x}px`;
+    img.style.top = `${y}px`;
+});

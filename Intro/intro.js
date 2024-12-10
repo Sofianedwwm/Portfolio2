@@ -2,12 +2,14 @@
 
 // Liste des vidéos (chemins des fichiers)
 const videos = [
-    "../assets/gif2.mp4",
-    "../assets/gif3.mp4",
-    "../assets/videobig.mp4",
-    "../assets/gif4.mp4",
-    "../assets/gif5.mp4"
+    "../assets/images/gif2.mp4",
+    "../assets/images/gif3.mp4",
+    "../assets/images/videobig.mp4",
+    "../assets/images/gif4.mp4",
+    "../assets/images/gif5.mp4"
 ];
+
+
 
 const logo = document.getElementById("logobg");
 const videoContainer = document.createElement("video"); // Création d'un élément vidéo dynamique

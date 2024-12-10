@@ -31,8 +31,8 @@ main{
 }
 
 @font-face {
-    font-family: troisD ;
-    src: url(./assets/static/EduAUVICWANTArrows-SemiBold.ttf);
+    font-family: Lora ;
+    src: url(../assets/polices/Lora-VariableFont_wght.ttf);
 }
 
 main button{
@@ -80,28 +80,45 @@ main button:hover {
 
 .BarreMilieu h1{
     position: absolute;
-    left: 35%;
-    top: 40%;
+    padding: 7px;
+    left: 25%;
+    top: 35%;
     font-weight: bold;
     text-transform: uppercase;
     color: #11ffff;
-    font-size: 40px;
+    font-size: 75px;
     transition: color 2500ms;
     text-shadow: black;
+    font-family: Lora;
+    /* From https://css.glass */
+
+background: rgba(14, 9, 9, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.8px);
+-webkit-backdrop-filter: blur(1.8px);
+
     
 }
 
-.BarreMilieu span{
+.BarreMilieu span.animation-container{
     position: absolute;
-    left: 37%;
+    left: 25%;
     top: 47%;
     font-weight: bolder;
     text-transform: uppercase;
     color: #f3e2dd;
-    font-size: 35px;
+    font-size: 70px;
     letter-spacing: 6px;
     transition: color 2500ms;
     text-shadow: black;
+    font-family: Lora;
+    background: rgba(14, 10, 10, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.8px);
+    -webkit-backdrop-filter: blur(1.8px);
+    border-radius: 16px;
+    padding: 7px;
     
 }
 
