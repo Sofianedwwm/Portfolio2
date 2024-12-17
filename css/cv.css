@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #225380;
+    --secondary-color: #230C26;
+    --accent-color: #add8e6;
+    --text-color: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(225deg, var(--primary-color) 22%, var(--secondary-color) 73%);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(34, 83, 128, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-speed) ease;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 1.5rem;
+    transition: padding var(--transition-speed) ease;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-link .text {
+    transition: opacity var(--transition-speed) ease;
+}
+
+.nav-link .icon {
+    font-size: 1.5rem;
+    opacity: 0;
+    width: 0;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Classe ajoutée au header lors du scroll */
+#header.scrolled {
+    padding: 0;
+    background: rgba(34, 83, 128, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header.scrolled ul {
+    padding: 0.5rem;
+}
+
+#header.scrolled .nav-link .text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+#header.scrolled .nav-link .icon {
+    opacity: 1;
+    width: auto;
+}
+
+#header.scrolled .nav-link {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* ... Autres styles de header ... */
+
+/* Profile Section */
+.profile-section {
+    padding: 120px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideIn 0.5s ease forwards;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+    animation: pulse 2s infinite;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-title h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: var(--accent-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transform: translateX(30px);
+    opacity: 0;
+    animation: slideIn 0.5s ease forwards;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+    min-width: 200px;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(173, 216, 230, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(173, 216, 230, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(173, 216, 230, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 2rem;
+    }
+
+    .timeline-dot {
+        left: -10px !important;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .contact-cards {
+        gap: 1.5rem;
+    }
+
+    .contact-card {
+        min-width: 150px;
+    }
+}
+
+/* Ajoutez ces styles pour les titres de section */
+.experience-section h2,
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.experience-section h2::after,
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+    animation: lineGrow 0.5s ease forwards;
+}
+
+/* Ajustement de la section expérience */
+.experience-section {
+    padding: 4rem 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ajustement de la section contact */
+.contact-section {
+    padding: 4rem 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}

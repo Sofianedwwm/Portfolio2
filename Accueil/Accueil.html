@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Accueil.css">
-    <script src="Accueil.js" defer></script>
-    <title>Accueil</title>
+    <link rel="stylesheet" href="../css/Accueil.css">
+    <script src="../js/Accueil.js" defer></script>
+    <title>Portfolio - Accueil</title>
 </head>
 <body>
+    <header id="header">
+        <ul>
+            <li>
+                <a href="../Competences/competences.html" class="nav-link">
+                    <span class="icon">💡</span>
+                    <span class="text">Compétences</span>
+                </a>
+            </li>
+            <li>
+                <a href="../CV/cv.html" class="nav-link">
+                    <span class="icon">📄</span>
+                    <span class="text">CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Projets/projets.html" class="nav-link">
+                    <span class="icon">🎯</span>
+                    <span class="text">Projets</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <span class="icon">🏠</span>
+                    <span class="text">Intro</span>
+                </a>
+            </li>
+        </ul>
+    </header>
 
-<header id="header">
-    <ul>
-        <li><a href="">Compétences</a></li>
-        <li><a href="../CV/cv.html">CV</a></li>
-        <li><a href="">Mini-jeux</a></li>
-        <li><a href="/index.html">Intro</a></li>
-       
-    </ul>
-</header>
-
-
-<div class="container">
-    <img class="image" src="../assets/images/Accueil1.webp" alt="imggamer">
-    <div class="text">
-        <h1>Titre : Bienvenue</h1>
-
-        <p>Texte qui va chevaucher l'image : Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam eligendi perferendis ratione rem totam, molestiae, deserunt repellat nihil magnam velit nam soluta suscipit voluptates ab debitis fuga ipsam vitae?</p>
-    </div>
-</div>
-   
-    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="animated-title">Développeur Web Créatif</h1>
+                <p class="animated-subtitle">Transformons vos idées en réalité digitale</p>
+                <div class="cta-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

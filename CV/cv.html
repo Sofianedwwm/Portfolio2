@@ -1,39 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cv.css">
-    <script src="cv.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/cv.css">
+    <script src="../js/cv.js" defer></script>
+    <title>Mon CV - Portfolio</title>
 </head>
 <body>
     <header id="header">
         <ul>
-            <li><a href="../Accueil/Accueil.html">Accueil</a></li>
-            <li><a href="">Compétences</a></li>
-            <li><a href="">Mini-jeux</a></li>
-            <li><a href="/index.html">Intro</a></li>
-           
+            <li>
+                <a href="../Accueil/Accueil.html" class="nav-link">
+                    <span class="icon">🏠</span>
+                    <span class="text">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Competences/competences.html" class="nav-link">
+                    <span class="icon">💡</span>
+                    <span class="text">Compétences</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Projets/projets.html" class="nav-link">
+                    <span class="icon">🎯</span>
+                    <span class="text">Projets</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <span class="icon">🏠</span>
+                    <span class="text">Intro</span>
+                </a>
+            </li>
         </ul>
     </header>
 
     <main>
-        <div class="arc-container" id="arcContainer">
-            <img src="../assets/images/tel.png" alt="Image 1">
-            <img src="../assets/images/mail.png" alt="Image 2">
-            <img src="../assets/images/linkedin.png" alt="Image 3">
-            <!-- <img src="../assets/images/fb2.png" alt="Image 4"> -->
-            <img src="../assets/images/insta.jpg" alt="Image 5">
-            <img src="../assets/images/github.png" alt="Image 6">
-            <img src="../assets/images/cv1.png" alt="Image 7">
-        </div>
-    
-    
-        </body>
-        
-        </html>
+        <section class="profile-section">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img src="../assets/images/profile.jpg" alt="Photo de profil">
+                    </div>
+                    <div class="profile-title">
+                        <h1 class="glitch-text">Votre Nom</h1>
+                        <p class="typing-text">Développeur Web Full Stack</p>
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <div class="about-me">
+                        <h2>À propos de moi</h2>
+                        <p>Passionné par le développement web et les nouvelles technologies, je crée des expériences numériques innovantes et intuitives. Mon objectif est de combiner créativité et fonctionnalité pour donner vie à des projets uniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2>Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023 - Présent</h3>
+                        <h4>Développeur Web Full Stack</h4>
+                        <p>Description de votre expérience actuelle...</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2021 - 2023</h3>
+                        <h4>Formation Développeur Web</h4>
+                        <p>Description de votre formation...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact</h2>
+            <div class="contact-cards">
+                <a href="mailto:votre@email.com" class="contact-card">
+                    <span class="icon">📧</span>
+                    <span class="text">Email</span>
+                </a>
+                <a href="https://linkedin.com/in/votre-profil" class="contact-card">
+                    <span class="icon">💼</span>
+                    <span class="text">LinkedIn</span>
+                </a>
+                <a href="https://github.com/votre-profil" class="contact-card">
+                    <span class="icon">💻</span>
+                    <span class="text">GitHub</span>
+                </a>
+            </div>
+        </section>
     </main>
-    
 </body>
 </html>

@@ -3,46 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro</title>
-    <link rel="stylesheet" href="intro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <script src="intro.js" defer></script>
-    
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js" defer></script>
+    <title>Portfolio - Intro</title>
 </head>
 <body>
-<header>
-    <span class="logobg" id="logobg"><i class="fa-brands fa-battle-net"></span>
-</header>
-    <main>   
-    
-        
-        <div class="container">
-            
-            <button class="btnacc" onclick="window.location.href='../Accueil/Accueil.html'">
-                Press Enter to visit
-                
-            </button>
-            
-        </div>
-        <div class="BarreMilieu">
-            <h1>Bonjour, je suis : </h1>
-              <br>
-              <span class="animation-container">
-                  <span class="animation"></span>
-
-              </span>
+    <main>
+        <div class="intro-container">
+            <div class="text-animation">
+                <h1 class="intro-title">Sofiane Cherigui</h1>
+                <div class="dynamic-text">
+                    <span class="typing"></span>
+                </div>
             </div>
-</main>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('.animation', {
-        strings: ['Sofiane Cherigui.', 'Dev. Web.', 'Gamer.'],
-        loop: true,
-        typeSpeed: 80,
-        backSpeed: 30,
-    });
-    </script>
+            <div class="intro-content">
+                <a href="./Accueil/Accueil.html" class="enter-btn">Découvrir</a>
+            </div>
+        </div>
+    </main>
 
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
 </body>
 </html>

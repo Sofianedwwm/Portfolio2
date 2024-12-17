@@ -1,0 +1,330 @@
+:root {
+    --primary-color: #225380;
+    --secondary-color: #230C26;
+    --accent-color: #add8e6;
+    --text-color: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(225deg, var(--primary-color) 22%, var(--secondary-color) 73%);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(34, 83, 128, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-speed) ease;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 1.5rem;
+    transition: padding var(--transition-speed) ease;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-link .text {
+    transition: opacity var(--transition-speed) ease;
+}
+
+.nav-link .icon {
+    font-size: 1.5rem;
+    opacity: 0;
+    width: 0;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Classe ajoutée au header lors du scroll */
+#header.scrolled {
+    padding: 0;
+    background: rgba(34, 83, 128, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header.scrolled ul {
+    padding: 0.5rem;
+}
+
+#header.scrolled .nav-link .text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+#header.scrolled .nav-link .icon {
+    opacity: 1;
+    width: auto;
+}
+
+#header.scrolled .nav-link {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* Ajoutez ces media queries pour le header */
+@media (max-width: 768px) {
+    #header ul {
+        padding: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #header.scrolled .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Projects Showcase */
+.projects-showcase {
+    padding: 120px 20px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+    animation: lineGrow 0.5s ease forwards;
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+.project-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.project-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.project-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.project-info h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.project-tech {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.tech-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(173, 216, 230, 0.2);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.2);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(173, 216, 230, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--accent-color);
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-showcase {
+        padding: 100px 15px 60px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .project-info h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-container {
+        height: auto;
+    }
+} 
