@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Configuration des textes à animer
     const texts = [
-        "Développeur Web Full Stack",
-        "Passionné par le Code",
-        "Créatif & Innovant",
-        "À la Recherche de Nouveaux Défis"
+        "Développeur Web / Web mobile.",
+        "Passionné par le code et les jeux vidéo.",
+        "Créatif & Innovant.",
+        "À la recherche de nouveaux défis..."
     ];
 
     const typingElement = document.querySelector('.typing');
