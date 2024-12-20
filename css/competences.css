@@ -34,9 +34,8 @@ body {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    padding: 1.5rem;
+    padding: 1rem;
 }
-
 .nav-link {
     display: flex;
     align-items: center;
@@ -60,6 +59,23 @@ body {
     transition: all var(--transition-speed) ease;
 }
 
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+
 /* Scroll banner styles */
 
 main{
@@ -82,7 +98,7 @@ main{
 .bandeau .logos {
     display: flex;
     justify-content: space-between;
-    animation: scroll 6s linear infinite;
+    animation: scroll 9s linear infinite;
     width: 100%;
 
     

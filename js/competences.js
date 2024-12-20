@@ -20,4 +20,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
         skillItems.forEach(item => observer.observe(item));
     }
+    
+    const header = document.getElementByclass('header');
+document.addEventListener('DOMContentLoaded', function() {
+    // Animation du header au scroll
+    const scrollThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    setTimeout(typeWriter, 1000);
+});
+
 });
